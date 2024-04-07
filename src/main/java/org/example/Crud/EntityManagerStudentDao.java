@@ -1,4 +1,4 @@
-package org.example.Crud;
+package org.example.crud;
 
 
 import org.example.entities.Student;
@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import java.util.List;
 
 public class EntityManagerStudentDao {
     private final SessionFactory sessionFactory;
@@ -45,7 +46,6 @@ public class EntityManagerStudentDao {
     @Override
     public List<Student> findAll() {
         EntityManager entityManager = sessionFactory.createEntityManager();
-        return entityManager.createQuery("select s from Student s",
-                Student.class).getResultList();
+        return entityManager.createQuery("select s from Student s", Student.class).getResultList();
     }
 }
