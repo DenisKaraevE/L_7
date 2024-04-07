@@ -1,4 +1,4 @@
-package org.example.CrudDao;
+package org.example.Crud;
 
 import java.util.List;
 
